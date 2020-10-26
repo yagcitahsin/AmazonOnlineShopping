@@ -1,0 +1,42 @@
+Feature: Facebook sign up page and create new account
+
+  Scenario:  User should be able to create a new account with valid credentials
+    Given User should  land on facebook home page "https://www.facebook.com/"
+    And User should be able to click on Create a new account Button
+
+    When User passes provided information
+    |First_Name | Jason |
+    |Last_Name | Smith |
+    |MobileNumber | 666555444 |
+    |NewPassword | JS123445 |
+    |BirthMonth | May |
+    |Birthday | 20 |
+    |BirthYear | 1980 |
+    |Gender | Male |
+
+    And User should be able to click sign up button
+    And User should be able to enter SMS or mail code and click continue button
+
+    Then User should be able to verify that "Account Confirmed" message
+    And  User should be able to click on Okay button
+    And User should be able to land on his created facebook page
+
+  Scenario:  User should not  be able to create a new account without valid credentials
+    Given User should  land on facebook home page "https://www.facebook.com/"
+    And User should be able to click on Create a new account Button
+
+    When User passes invalid or null data information
+      |First_Name |    |
+      |Last_Name |    |
+      |MobileNumber | xxxxx |
+      |NewPassword |       |
+      |BirthMonth |    |
+      |Birthday |    |
+      |BirthYear |    |
+      |Gender |   |
+
+    And User should be able to click sign up button
+
+    Then  User should not  be able to navigate the next page
+
+    // Note: You can derivate many possiple scenarios like this.

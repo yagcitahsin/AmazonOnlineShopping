@@ -1,0 +1,189 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "start_timestamp": "2020-10-26T17:05:56.887Z",
+        "before": [
+          {
+            "result": {
+              "duration": 12265440800,
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.AmazonShopping.testScripts.Hooks.setUp()"
+            }
+          }
+        ],
+        "line": 4,
+        "name": "User should be able to add and delete items from item chart",
+        "description": "",
+        "id": "item-chart;user-should-be-able-to-add-and-delete-items-from-item-chart",
+        "after": [
+          {
+            "result": {
+              "duration": 2998300,
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.AmazonShopping.testScripts.Hooks.tearDown(io.cucumber.java.Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 4346047300,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "search for \"hats for men\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"hats for men\"",
+                  "offset": 11
+                }
+              ],
+              "location": "com.AmazonShopping.testScripts.itemChartStepDefs.search_for(java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 8990736500,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "add number 1 item hat to Cart with quantity 2",
+            "match": {
+              "arguments": [
+                {
+                  "val": "1",
+                  "offset": 11
+                },
+                {
+                  "val": "2",
+                  "offset": 44
+                }
+              ],
+              "location": "com.AmazonShopping.testScripts.itemChartStepDefs.add_first_hat_to_Cart_with_quantity(int,int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 2688333100,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "open cart and assert total price and quantity are correct",
+            "match": {
+              "location": "com.AmazonShopping.testScripts.itemChartStepDefs.open_cart_and_assert_total_price_and_quantity_are_correct()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 2599386000,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "search for \"hats for woman\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"hats for woman\"",
+                  "offset": 11
+                }
+              ],
+              "location": "com.AmazonShopping.testScripts.itemChartStepDefs.search_for(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 9086781600,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "add number 1 item hat to Cart with quantity 1",
+            "match": {
+              "arguments": [
+                {
+                  "val": "1",
+                  "offset": 11
+                },
+                {
+                  "val": "1",
+                  "offset": 44
+                }
+              ],
+              "location": "com.AmazonShopping.testScripts.itemChartStepDefs.add_first_hat_to_Cart_with_quantity(int,int)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 2022881700,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "open cart and assert total price and quantity are correct",
+            "match": {
+              "location": "com.AmazonShopping.testScripts.itemChartStepDefs.open_cart_and_assert_total_price_and_quantity_are_correct()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 658589100,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "change the quantity for \"hats for men\" to 1 item",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"hats for men\"",
+                  "offset": 24
+                },
+                {
+                  "val": "1",
+                  "offset": 42
+                }
+              ],
+              "location": "com.AmazonShopping.testScripts.itemChartStepDefs.change_the_quantity_for_to_item(java.lang.String,int)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 2159903700,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "assert total price and quantity are changed correctly",
+            "match": {
+              "location": "com.AmazonShopping.testScripts.itemChartStepDefs.assert_total_price_and_quantity_are_changed_correctly()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@smoke"
+          }
+        ]
+      }
+    ],
+    "name": "Item Chart",
+    "description": "",
+    "id": "item-chart",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/features/itemChart.feature",
+    "tags": []
+  }
+]
